@@ -59,7 +59,7 @@ class RegisteredUserController extends Controller
         if ($user->role === User::ROLE_PENYETOR) {
             Auth::login($user);
 
-            return redirect('/')->with('status', 'Registrasi berhasil. Selamat datang, '.$user->name.'!');
+            return redirect()->route('dashboard')->with('status', 'Registrasi berhasil. Selamat datang, '.$user->name.'!');
         }
 
         return redirect()->route('login')->with(

@@ -41,7 +41,7 @@ class AuthenticatedSessionController extends Controller
 
         $request->session()->regenerate();
 
-        return redirect()->intended('/')->with('status', 'Berhasil masuk. Selamat datang kembali, '.$user->name.'!');
+        return redirect()->intended(route('dashboard'))->with('status', 'Berhasil masuk. Selamat datang kembali, '.$user->name.'!');
     }
 
     public function destroy(Request $request): RedirectResponse

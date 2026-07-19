@@ -258,6 +258,7 @@
                 @auth
                     <span class="role-badge">{{ str_replace('_', ' ', auth()->user()->role) }}</span>
                     <span>Halo, {{ auth()->user()->name }}</span>
+                    <a href="{{ route('dashboard') }}" class="btn-text">Dashboard</a>
                     <form class="inline" method="POST" action="{{ route('logout') }}">
                         @csrf
                         <button type="submit" class="btn btn-ghost">Keluar</button>
@@ -283,7 +284,7 @@
 
                 <div class="hero-ctas">
                     @auth
-                        <a href="#alur" class="btn btn-primary btn-lg">Lihat alur sistem</a>
+                        <a href="{{ route('dashboard') }}" class="btn btn-primary btn-lg">Buka dashboard</a>
                     @else
                         <a href="{{ route('register') }}" class="btn btn-primary btn-lg">Daftar sekarang</a>
                         <a href="#alur" class="btn btn-ghost btn-lg">Pelajari alurnya</a>
