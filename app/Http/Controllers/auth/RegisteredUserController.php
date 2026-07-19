@@ -62,9 +62,9 @@ class RegisteredUserController extends Controller
             return redirect('/')->with('status', 'Registrasi berhasil. Selamat datang, '.$user->name.'!');
         }
 
-        return redirect()->route('register')->with(
+        return redirect()->route('login')->with(
             'status',
-            'Registrasi berhasil. Akun '.$user->name.' akan aktif setelah diverifikasi oleh admin.'
+            'Registrasi berhasil. Akun '.$user->name.' akan aktif setelah diverifikasi oleh admin, silakan masuk setelah itu.'
         );
     }
 }

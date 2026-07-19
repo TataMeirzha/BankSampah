@@ -460,7 +460,7 @@
                 <button type="submit" class="submit-btn">Daftar sekarang</button>
             </form>
 
-            <p class="login-hint">Sudah punya akun? <a href="#">Masuk di sini</a></p>
+            <p class="login-hint">Sudah punya akun? <a href="{{ route('login') }}">Masuk di sini</a></p>
         </div>
     </div>
 
